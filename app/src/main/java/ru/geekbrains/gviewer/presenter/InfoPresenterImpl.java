@@ -27,10 +27,13 @@ public class InfoPresenterImpl extends MvpBasePresenter<InfoView> implements Inf
                         InfoView infoView = getView();
                         infoView.setData(s);
                         infoView.showContent();
-                    } else {
-                        showError(model.getThrowable(), pullToRefresh);
                     }
                 }
+            }
+        }, new Action1<Throwable>() {
+            @Override
+            public void call(Throwable throwable) {
+                getView().showError(throwable, pullToRefresh);
             }
         });
     }
