@@ -32,7 +32,7 @@ public class InfoActivity extends MvpLceViewStateActivity<TextView, String, Info
         swipeRefreshLayout.setOnRefreshListener(this);
 //        contentField = (TextView) findViewById(R.id.text_field);
 //        contentView.setOnRefreshListener(this);
-        loadData(false);
+//        loadData(false);
     }
 
     @NonNull

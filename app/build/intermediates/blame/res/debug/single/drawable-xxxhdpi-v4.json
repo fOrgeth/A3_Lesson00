@@ -24,6 +24,10 @@
         "source": "C:\\Users\\vdis\\.android\\build-cache\\3bdc717cad39a7425c2f86a969c32264f0eba8dd\\output\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_left_mtrl_light.png"
     },
     {
+        "merged": "C:\\Users\\vdis\\AndroidStudioProjects\\GB\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\abc_text_select_handle_left_mtrl_alpha.png",
+        "source": "C:\\Users\\vdis\\.android\\build-cache\\e73e470cfd83b7241d3c876d0861b070562f5ad2\\output\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_left_mtrl_alpha.png"
+    },
+    {
         "merged": "C:\\Users\\vdis\\AndroidStudioProjects\\GB\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
         "source": "C:\\Users\\vdis\\.android\\build-cache\\3bdc717cad39a7425c2f86a969c32264f0eba8dd\\output\\res\\drawable-xxxhdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
@@ -98,6 +102,10 @@
     {
         "merged": "C:\\Users\\vdis\\AndroidStudioProjects\\GB\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\abc_ic_star_black_36dp.png",
         "source": "C:\\Users\\vdis\\.android\\build-cache\\3bdc717cad39a7425c2f86a969c32264f0eba8dd\\output\\res\\drawable-xxxhdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\vdis\\AndroidStudioProjects\\GB\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\abc_text_select_handle_right_mtrl_alpha.png",
+        "source": "C:\\Users\\vdis\\.android\\build-cache\\e73e470cfd83b7241d3c876d0861b070562f5ad2\\output\\res\\drawable-xxxhdpi-v4\\abc_text_select_handle_right_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\vdis\\AndroidStudioProjects\\GB\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",

@@ -1,4 +1,7 @@
-#Tue Oct 09 11:51:55 GMT+03:00 2018
-base.0=C\:\\Users\\vdis\\AndroidStudioProjects\\GB\\A3\\A3_Lesson00\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
-renamed.0=classes.dex
-file.0=C\:\\Users\\vdis\\AndroidStudioProjects\\GB\\A3\\A3_Lesson00\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
+#Fri Oct 19 09:55:07 GMT+03:00 2018
+base.0=C\:\\Users\\vdis\\AndroidStudioProjects\\GB\\A3\\A3_Lesson00\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_d306bb4e164804cd32079ff254a8811b3454dc10
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=C\:\\Users\\vdis\\AndroidStudioProjects\\GB\\A3\\A3_Lesson00\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_16489dbabd80b8076d712c82592b81feae90016a\\classes.dex
+base.1=C\:\\Users\\vdis\\AndroidStudioProjects\\GB\\A3\\A3_Lesson00\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_16489dbabd80b8076d712c82592b81feae90016a
+file.0=C\:\\Users\\vdis\\AndroidStudioProjects\\GB\\A3\\A3_Lesson00\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_d306bb4e164804cd32079ff254a8811b3454dc10\\classes.dex

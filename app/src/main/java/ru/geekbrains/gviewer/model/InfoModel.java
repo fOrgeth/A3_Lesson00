@@ -1,6 +1,8 @@
 package ru.geekbrains.gviewer.model;
 
+import rx.Observable;
+
 public interface InfoModel {
-	void retrieveInfo(MyAction<String> onNext);
+	Observable<String> retrieveInfo();
 	Throwable getThrowable();
 }

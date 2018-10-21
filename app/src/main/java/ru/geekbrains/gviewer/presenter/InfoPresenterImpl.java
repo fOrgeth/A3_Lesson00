@@ -3,8 +3,10 @@ package ru.geekbrains.gviewer.presenter;
 import com.hannesdorfmann.mosby.mvp.MvpBasePresenter;
 
 import ru.geekbrains.gviewer.model.InfoModel;
-import ru.geekbrains.gviewer.model.MyAction;
 import ru.geekbrains.gviewer.view.InfoView;
+import rx.Scheduler;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Action1;
 
 public class InfoPresenterImpl extends MvpBasePresenter<InfoView> implements InfoPresenter {
 
@@ -17,9 +19,9 @@ public class InfoPresenterImpl extends MvpBasePresenter<InfoView> implements Inf
     @Override
     public void loadInformation(final boolean pullToRefresh) {
         getView().showLoading(pullToRefresh);
-        model.retrieveInfo(new MyAction<String>() {
+        model.retrieveInfo().observeOn(AndroidSchedulers.mainThread()).subscribe(new Action1<String>() {
             @Override
-            public void onDownloadCallback(String s) {
+            public void call(String s) {
                 if (isViewAttached()) {
                     if (s != null) {
                         InfoView infoView = getView();

@@ -63,6 +63,7 @@ MERGED from [com.android.support:support-core-utils:24.2.1] C:\Users\vdis\.andro
 MERGED from [com.android.support:animated-vector-drawable:24.2.1] C:\Users\vdis\.android\build-cache\0761629adcfc4a0695aea45c9417eee619f16902\output\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:24.2.1] C:\Users\vdis\.android\build-cache\2c1991a0909d65b7d8b6c953a74f116221682e15\output\AndroidManifest.xml:21:5-43
 MERGED from [com.android.support:support-compat:24.2.1] C:\Users\vdis\.android\build-cache\e37fe16b673b7c7677d3246bd31ec7577e64640e\output\AndroidManifest.xml:21:5-23:58
+MERGED from [io.reactivex:rxandroid:1.2.1] C:\Users\vdis\.android\build-cache\15c40a9c7bce550970ea84b9f6b2baecb98245c4\output\AndroidManifest.xml:19:5-43
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:24.2.1] C:\Users\vdis\.android\build-cache\3bdc717cad39a7425c2f86a969c32264f0eba8dd\output\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
