@@ -33,7 +33,10 @@ public class InfoPresenterImpl extends MvpBasePresenter<InfoView> implements Inf
         }, new Action1<Throwable>() {
             @Override
             public void call(Throwable throwable) {
-                getView().showError(throwable, pullToRefresh);
+                InfoView iv=getView();
+                iv.setData("empty string");
+                iv.showContent();
+//                getView().showError(throwable, pullToRefresh);
             }
         });
     }
