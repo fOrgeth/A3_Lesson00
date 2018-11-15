@@ -2,5 +2,7 @@ package ru.geekbrains.gviewer.view;
 
 import com.hannesdorfmann.mosby.mvp.lce.MvpLceView;
 
-public interface InfoView extends MvpLceView<String> {
+import java.util.List;
+
+public interface InfoView extends MvpLceView<List<String>> {
 }

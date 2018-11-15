@@ -3,6 +3,9 @@ package ru.geekbrains.gviewer.view;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hannesdorfmann.mosby.mvp.lce.MvpLceActivity;
@@ -10,18 +13,23 @@ import com.hannesdorfmann.mosby.mvp.viewstate.lce.LceViewState;
 import com.hannesdorfmann.mosby.mvp.viewstate.lce.MvpLceViewStateActivity;
 import com.hannesdorfmann.mosby.mvp.viewstate.lce.data.RetainingLceViewState;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import ru.geekbrains.gviewer.R;
 import ru.geekbrains.gviewer.model.InfoModelImpl;
 import ru.geekbrains.gviewer.presenter.InfoPresenter;
 import ru.geekbrains.gviewer.presenter.InfoPresenterImpl;
 
-public class InfoActivity extends MvpLceViewStateActivity<TextView, String, InfoView, InfoPresenter>
+public class InfoActivity extends MvpLceViewStateActivity<RecyclerView, List<String>, InfoView, InfoPresenter>
         implements InfoView, SwipeRefreshLayout.OnRefreshListener {
 
     private static final String UNKNOWN_ERROR_MESSAGE = "Unknown error";
 
-//    private TextView contentField;
+    //    private TextView contentField;
     private SwipeRefreshLayout swipeRefreshLayout;
+    private MainViewAdapter myAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +38,10 @@ public class InfoActivity extends MvpLceViewStateActivity<TextView, String, Info
         setContentView(R.layout.screen_info);
         swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
         swipeRefreshLayout.setOnRefreshListener(this);
+        LinearLayoutManager linearLayout = new LinearLayoutManager(this);
+        contentView.setLayoutManager(linearLayout);
+        myAdapter = new MainViewAdapter(new ArrayList<String>());
+        contentView.setAdapter(myAdapter);
 //        contentField = (TextView) findViewById(R.id.text_field);
 //        contentView.setOnRefreshListener(this);
 //        loadData(false);
@@ -48,8 +60,8 @@ public class InfoActivity extends MvpLceViewStateActivity<TextView, String, Info
     }
 
     @Override
-    public void setData(String data) {
-        contentView.setText(data);
+    public void setData(List<String> data) {
+        myAdapter.addItems(data);
     }
 
     @Override
@@ -58,13 +70,13 @@ public class InfoActivity extends MvpLceViewStateActivity<TextView, String, Info
     }
 
     @Override
-    public LceViewState<String, InfoView> createViewState() {
+    public LceViewState<List<String>, InfoView> createViewState() {
         return new RetainingLceViewState<>();
     }
 
     @Override
-    public String getData() {
-        return contentView.getText().toString();
+    public List<String> getData() {
+        return myAdapter.getItemsList();
     }
 
 //    @Override
