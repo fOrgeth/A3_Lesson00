@@ -1,8 +1,10 @@
 package ru.geekbrains.gviewer.model;
 
+import java.util.List;
+
 import rx.Observable;
 
 public interface InfoModel {
-	Observable<String> retrieveInfo();
+	Observable<List<String>> retrieveInfo();
 	Throwable getThrowable();
 }
