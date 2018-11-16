@@ -7,12 +7,14 @@ import java.util.List;
 
 import ru.geekbrains.gviewer.model.InfoModel;
 import ru.geekbrains.gviewer.view.InfoView;
+import rx.Subscription;
 import rx.functions.Action1;
 import rx.schedulers.Schedulers;
 
 public class InfoPresenterImpl extends MvpBasePresenter<InfoView> implements InfoPresenter {
 
     private final InfoModel model;
+    private Subscription subscription;
 
     public InfoPresenterImpl(InfoModel model) {
         this.model = model;
@@ -21,7 +23,7 @@ public class InfoPresenterImpl extends MvpBasePresenter<InfoView> implements Inf
     @Override
     public void loadInformation(final boolean pullToRefresh) {
         getView().showLoading(pullToRefresh);
-        model.retrieveInfo().observeOn(Schedulers.immediate()).subscribe(new Action1<List<String>>() {
+        subscription = model.retrieveInfo().observeOn(Schedulers.immediate()).subscribe(new Action1<List<String>>() {
             @Override
             public void call(List<String> s) {
                 if (isViewAttached()) {
@@ -40,7 +42,7 @@ public class InfoPresenterImpl extends MvpBasePresenter<InfoView> implements Inf
                 errList.add("empty string");
                 iv.setData(errList);
                 iv.showContent();
-//                getView().showError(throwable, pullToRefresh);s
+//                getView().showError(throwable, pullToRefresh);
             }
         });
     }
@@ -49,9 +51,12 @@ public class InfoPresenterImpl extends MvpBasePresenter<InfoView> implements Inf
         getView().showError(e, pullToRefresh);
     }
 
-    /*@Override
+    @Override
     public void detachView(boolean retainInstance) {
-        if(!retainInstance&&)
+        if (!retainInstance && !subscription.isUnsubscribed() && subscription != null) {
+            subscription.unsubscribe();
+            subscription = null;
+        }
         super.detachView(retainInstance);
-    }*/
+    }
 }
