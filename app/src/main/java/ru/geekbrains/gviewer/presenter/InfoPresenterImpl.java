@@ -36,7 +36,7 @@ public class InfoPresenterImpl extends MvpBasePresenter<InfoView> implements Inf
                 InfoView iv=getView();
                 iv.setData("empty string");
                 iv.showContent();
-//                getView().showError(throwable, pullToRefresh);s
+//                getView().showError(throwable, pullToRefresh);
             }
         });
     }

@@ -4,7 +4,6 @@ import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
 import rx.functions.Func1;
-import rx.functions.Func2;
 
 public class InfoModelImpl implements InfoModel {
 
@@ -15,7 +14,7 @@ public class InfoModelImpl implements InfoModel {
 
     @Override
     public Observable<String> retrieveInfo() {
-        Observable<String> observable1 = Observable.timer(1L, TimeUnit.SECONDS)
+        return Observable.timer(1L, TimeUnit.SECONDS)
                 .flatMap(new Func1<Long, Observable<String>>() {
                     @Override
                     public Observable<String> call(Long aLong) {
@@ -31,19 +30,6 @@ public class InfoModelImpl implements InfoModel {
                         return result;
                     }
                 });
-        Observable<String> observable2 = Observable.timer(1L, TimeUnit.SECONDS)
-                .flatMap(new Func1<Long, Observable<String>>() {
-                    @Override
-                    public Observable<String> call(Long aLong) {
-                        return Observable.just(Double.toString(Math.random() * 100));
-                    }
-                });
-        return observable1.zipWith(observable2, new Func2<String, String, String>() {
-            @Override
-            public String call(String s, String s2) {
-                return s + " " + s2;
-            }
-        });
     }
 
     public Throwable getThrowable() {
