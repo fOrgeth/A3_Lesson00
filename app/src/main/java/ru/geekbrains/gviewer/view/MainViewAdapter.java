@@ -4,7 +4,6 @@ package ru.geekbrains.gviewer.view;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.List;
@@ -15,11 +14,11 @@ public class MainViewAdapter extends RecyclerView.Adapter<MainViewAdapter.MainVi
     private List<String> itemsList;
 
     public static class MainViewHolder extends RecyclerView.ViewHolder {
-        private TextView textView;
+        public TextView textView;
 
-        public MainViewHolder(LinearLayout ll) {
-            super(ll);
-            textView = (TextView) ll.findViewById(R.id.rv_text_field);
+        public MainViewHolder(TextView itemView) {
+            super(itemView);
+            textView = itemView;
         }
     }
 
@@ -38,9 +37,9 @@ public class MainViewAdapter extends RecyclerView.Adapter<MainViewAdapter.MainVi
 
     @Override
     public MainViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        LinearLayout ll = (LinearLayout) LayoutInflater.from(parent.getContext())
+        TextView v = (TextView) LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.list_item, parent, false);
-        MainViewHolder vh = new MainViewHolder(ll);
+        MainViewHolder vh = new MainViewHolder(v);
         return vh;
     }
 
