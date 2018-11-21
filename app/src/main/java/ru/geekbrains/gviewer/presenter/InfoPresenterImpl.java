@@ -8,7 +8,7 @@ import java.util.List;
 import ru.geekbrains.gviewer.model.InfoModel;
 import ru.geekbrains.gviewer.view.InfoView;
 import rx.Subscription;
-import rx.functions.Action1;
+
 import rx.schedulers.Schedulers;
 
 public class InfoPresenterImpl extends MvpBasePresenter<InfoView> implements InfoPresenter {
@@ -23,9 +23,7 @@ public class InfoPresenterImpl extends MvpBasePresenter<InfoView> implements Inf
     @Override
     public void loadInformation(final boolean pullToRefresh) {
         getView().showLoading(pullToRefresh);
-        subscription = model.retrieveInfo().observeOn(Schedulers.immediate()).subscribe(new Action1<List<String>>() {
-            @Override
-            public void call(List<String> s) {
+        subscription = model.retrieveInfo().observeOn(Schedulers.immediate()).subscribe( s-> {
                 if (isViewAttached()) {
                     if (s != null) {
                         InfoView infoView = getView();
@@ -33,17 +31,14 @@ public class InfoPresenterImpl extends MvpBasePresenter<InfoView> implements Inf
                         infoView.showContent();
                     }
                 }
-            }
-        }, new Action1<Throwable>() {
-            @Override
-            public void call(Throwable throwable) {
-                InfoView iv = getView();
-                List<String> errList = new ArrayList<>();
-                errList.add("empty string");
-                iv.setData(errList);
-                iv.showContent();
+
+        }, throwable -> {
+            InfoView iv = getView();
+            List<String> errList = new ArrayList<>();
+            errList.add("empty string");
+            iv.setData(errList);
+            iv.showContent();
 //                getView().showError(throwable, pullToRefresh);
-            }
         });
     }
 
