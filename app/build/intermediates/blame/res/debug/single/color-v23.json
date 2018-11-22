@@ -1,9 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\fOrge\\AndroidStudio\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_default.xml",
-        "source": "C:\\Users\\fOrge\\.android\\build-cache\\1d5043c4f2dee59138eee39d735d0a16ceb36d9c\\output\\res\\color-v23\\abc_tint_default.xml"
-    },
-    {
         "merged": "C:\\Users\\vdis\\AndroidStudioProjects\\GB\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_track.xml",
         "source": "C:\\Users\\vdis\\.android\\build-cache\\3bdc717cad39a7425c2f86a969c32264f0eba8dd\\output\\res\\color-v23\\abc_tint_switch_track.xml"
     },
@@ -12,20 +8,8 @@
         "source": "C:\\Users\\vdis\\.android\\build-cache\\3bdc717cad39a7425c2f86a969c32264f0eba8dd\\output\\res\\color-v23\\abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "C:\\Users\\fOrge\\AndroidStudio\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_btn_checkable.xml",
-        "source": "C:\\Users\\fOrge\\.android\\build-cache\\1d5043c4f2dee59138eee39d735d0a16ceb36d9c\\output\\res\\color-v23\\abc_tint_btn_checkable.xml"
-    },
-    {
         "merged": "C:\\Users\\vdis\\AndroidStudioProjects\\GB\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_spinner.xml",
         "source": "C:\\Users\\vdis\\.android\\build-cache\\3bdc717cad39a7425c2f86a969c32264f0eba8dd\\output\\res\\color-v23\\abc_tint_spinner.xml"
-    },
-    {
-        "merged": "C:\\Users\\fOrge\\AndroidStudio\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_edittext.xml",
-        "source": "C:\\Users\\fOrge\\.android\\build-cache\\1d5043c4f2dee59138eee39d735d0a16ceb36d9c\\output\\res\\color-v23\\abc_tint_edittext.xml"
-    },
-    {
-        "merged": "C:\\Users\\fOrge\\AndroidStudio\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_btn_colored_borderless_text_material.xml",
-        "source": "C:\\Users\\fOrge\\.android\\build-cache\\1d5043c4f2dee59138eee39d735d0a16ceb36d9c\\output\\res\\color-v23\\abc_btn_colored_borderless_text_material.xml"
     },
     {
         "merged": "C:\\Users\\vdis\\AndroidStudioProjects\\GB\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\design_tint_password_toggle.xml",
@@ -34,26 +18,6 @@
     {
         "merged": "C:\\Users\\vdis\\AndroidStudioProjects\\GB\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_thumb.xml",
         "source": "C:\\Users\\vdis\\.android\\build-cache\\3bdc717cad39a7425c2f86a969c32264f0eba8dd\\output\\res\\color-v23\\abc_tint_switch_thumb.xml"
-    },
-    {
-        "merged": "C:\\Users\\fOrge\\AndroidStudio\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_spinner.xml",
-        "source": "C:\\Users\\fOrge\\.android\\build-cache\\1d5043c4f2dee59138eee39d735d0a16ceb36d9c\\output\\res\\color-v23\\abc_tint_spinner.xml"
-    },
-    {
-        "merged": "C:\\Users\\fOrge\\AndroidStudio\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_thumb.xml",
-        "source": "C:\\Users\\fOrge\\.android\\build-cache\\1d5043c4f2dee59138eee39d735d0a16ceb36d9c\\output\\res\\color-v23\\abc_tint_switch_thumb.xml"
-    },
-    {
-        "merged": "C:\\Users\\fOrge\\AndroidStudio\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_switch_track.xml",
-        "source": "C:\\Users\\fOrge\\.android\\build-cache\\1d5043c4f2dee59138eee39d735d0a16ceb36d9c\\output\\res\\color-v23\\abc_tint_switch_track.xml"
-    },
-    {
-        "merged": "C:\\Users\\fOrge\\AndroidStudio\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_color_highlight_material.xml",
-        "source": "C:\\Users\\fOrge\\.android\\build-cache\\1d5043c4f2dee59138eee39d735d0a16ceb36d9c\\output\\res\\color-v23\\abc_color_highlight_material.xml"
-    },
-    {
-        "merged": "C:\\Users\\fOrge\\AndroidStudio\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_seek_thumb.xml",
-        "source": "C:\\Users\\fOrge\\.android\\build-cache\\1d5043c4f2dee59138eee39d735d0a16ceb36d9c\\output\\res\\color-v23\\abc_tint_seek_thumb.xml"
     },
     {
         "merged": "C:\\Users\\vdis\\AndroidStudioProjects\\GB\\A3\\A3_Lesson00\\app\\build\\intermediates\\res\\merged\\debug\\color-v23\\abc_tint_edittext.xml",

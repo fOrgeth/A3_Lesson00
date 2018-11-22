@@ -27,7 +27,6 @@ public class InfoModelImpl implements InfoModel {
                         result = Observable.error(new IllegalStateException(BOHICA));
                     }
                     return result;
-
                 });
         Observable<Integer> observable2 = Observable.timer(1L, TimeUnit.SECONDS)
                 .flatMap(aLong -> Observable.from(new Integer[]{1, 2, 3, 4, 5}));
