@@ -19,7 +19,7 @@ public class MainViewAdapter extends RecyclerView.Adapter<MainViewAdapter.MainVi
 
         public MainViewHolder(LinearLayout ll) {
             super(ll);
-            textView = (TextView) ll.findViewById(R.id.rv_text_field);
+            textView = ll.findViewById(R.id.rv_text_field);
         }
     }
 

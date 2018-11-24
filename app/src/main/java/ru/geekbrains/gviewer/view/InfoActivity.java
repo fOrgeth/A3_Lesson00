@@ -36,11 +36,11 @@ public class InfoActivity extends MvpLceViewStateActivity<RecyclerView, List<Str
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
         setContentView(R.layout.screen_info);
-        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_container);
+        swipeRefreshLayout = findViewById(R.id.swipe_container);
         swipeRefreshLayout.setOnRefreshListener(this);
         LinearLayoutManager linearLayout = new LinearLayoutManager(this);
         contentView.setLayoutManager(linearLayout);
-        myAdapter = new MainViewAdapter(new ArrayList<String>());
+        myAdapter = new MainViewAdapter(new ArrayList<>());
         contentView.setAdapter(myAdapter);
 //        contentField = (TextView) findViewById(R.id.text_field);
 //        contentView.setOnRefreshListener(this);

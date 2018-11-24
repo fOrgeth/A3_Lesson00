@@ -1,9 +1,7 @@
 package ru.geekbrains.gviewer.model;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 import rx.Observable;
 
 
@@ -27,6 +25,7 @@ public class InfoModelImpl implements InfoModel {
                         result = Observable.error(new IllegalStateException(BOHICA));
                     }
                     return result;
+
                 });
         Observable<Integer> observable2 = Observable.timer(1L, TimeUnit.SECONDS)
                 .flatMap(aLong -> Observable.from(new Integer[]{1, 2, 3, 4, 5}));
