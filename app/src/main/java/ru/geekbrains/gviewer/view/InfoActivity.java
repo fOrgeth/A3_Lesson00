@@ -16,6 +16,8 @@ import com.hannesdorfmann.mosby.mvp.viewstate.lce.data.RetainingLceViewState;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import ru.geekbrains.gviewer.R;
 import ru.geekbrains.gviewer.model.InfoModelImpl;
 import ru.geekbrains.gviewer.presenter.InfoPresenter;
@@ -30,12 +32,16 @@ public class InfoActivity extends MvpLceViewStateActivity<RecyclerView, List<Str
     private SwipeRefreshLayout swipeRefreshLayout;
     private MainViewAdapter myAdapter;
 
+    @BindView(R.id.contentView)
+    RecyclerView recyclerView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
         setContentView(R.layout.screen_info);
+        ButterKnife.bind(this);
         swipeRefreshLayout = findViewById(R.id.swipe_container);
         swipeRefreshLayout.setOnRefreshListener(this);
         LinearLayoutManager linearLayout = new LinearLayoutManager(this);
