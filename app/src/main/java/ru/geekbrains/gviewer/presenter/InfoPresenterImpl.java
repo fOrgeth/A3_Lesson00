@@ -28,7 +28,7 @@ public class InfoPresenterImpl extends MvpBasePresenter<InfoView> implements Inf
                 if (isViewAttached()) {
                     if (s != null) {
                         InfoView infoView = getView();
-                        infoView.setData(s);
+                        infoView.setData(s.getLogin());
                         infoView.showContent();
                     }
                 }

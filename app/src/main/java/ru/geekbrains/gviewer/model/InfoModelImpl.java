@@ -2,12 +2,15 @@ package ru.geekbrains.gviewer.model;
 
 import android.support.annotation.NonNull;
 
+import com.google.gson.Gson;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import ru.geekbrains.gviewer.model.entity.GithubUser;
 import rx.Observable;
 import rx.functions.Func0;
 import rx.schedulers.Schedulers;
@@ -20,6 +23,7 @@ public class InfoModelImpl implements InfoModel {
 
     private final String user;
     private final OkHttpClient client;
+    private final Gson gson = new Gson();
 
     public InfoModelImpl(@NonNull String user, @NonNull OkHttpClient client) {
         this.user = user;
@@ -27,7 +31,7 @@ public class InfoModelImpl implements InfoModel {
     }
 
     @Override
-    public Observable<String> retrieveInfo() {
+    public Observable<GithubUser> retrieveInfo() {
         return Observable.defer(() -> {
             Observable<String> result;
             try {
@@ -42,7 +46,8 @@ public class InfoModelImpl implements InfoModel {
                 result = Observable.error(e);
             }
             return result;
-        }).subscribeOn(Schedulers.io());
+        }).map(str -> gson.fromJson(str, GithubUser.class))
+                .subscribeOn(Schedulers.io());
 
 
     }
