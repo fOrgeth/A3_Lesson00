@@ -1,8 +1,16 @@
 package ru.geekbrains.gviewer.model;
 
+import android.support.annotation.NonNull;
+
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import rx.Observable;
+import rx.functions.Func0;
+import rx.schedulers.Schedulers;
 
 
 public class InfoModelImpl implements InfoModel {
@@ -10,26 +18,36 @@ public class InfoModelImpl implements InfoModel {
     private static final String FUBAR = "FUBAR";
     private static final String SUSFU = "SUSFU";
     private static final String BOHICA = "BOHICA";
+    private static final String HTTPS_API_GITHUB_COM_USERS = "https://api.github.com/users/";
     private Throwable throwable;
 
+    private final String user;
+    private final OkHttpClient client;
+
+    public InfoModelImpl(@NonNull String user, @NonNull OkHttpClient client) {
+        this.user = user;
+        this.client = client;
+    }
+
     @Override
-    public Observable<List<String>> retrieveInfo() {
-        Observable<String> observable1 = Observable.timer(1L, TimeUnit.SECONDS)
-                .flatMap(aLong -> {
-                    Observable<String> result;
-                    double random = Math.random();
-                    if (random > 0.25) {
-                        result = Observable.from(new String[]{"A", "B", "C", "D", "E"});
+    public Observable<String> retrieveInfo() {
+        return Observable.defer(() -> {
+            Observable<String> result;
+            try {
+                result = Observable.just(client
+                        .newCall(new Request.Builder()
+                                .url(HTTPS_API_GITHUB_COM_USERS + user)
+                                .build())
+                        .execute()
+                        .body()
+                        .string());
+            } catch (IOException e) {
+                result = Observable.error(e);
+            }
+            return result;
+        }).subscribeOn(Schedulers.io());
 
-                    } else {
-                        result = Observable.error(new IllegalStateException(BOHICA));
-                    }
-                    return result;
 
-                });
-        Observable<Integer> observable2 = Observable.timer(1L, TimeUnit.SECONDS)
-                .flatMap(aLong -> Observable.from(new Integer[]{1, 2, 3, 4, 5}));
-        return observable1.zipWith(observable2, (s, s2) -> s + " " + s2).buffer(3);
     }
 
     public Throwable getThrowable() {

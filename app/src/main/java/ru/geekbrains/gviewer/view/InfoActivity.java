@@ -50,7 +50,8 @@ public class InfoActivity extends MvpLceViewStateActivity<TextView, String, Info
     @NonNull
     @Override
     public InfoPresenter createPresenter() {
-        return new InfoPresenterImpl(new InfoModelImpl());
+        String user= NATIONALSECURITYAGENCY;
+        return new InfoPresenterImpl(new InfoModelImpl(user, new OkHttpClient()));
     }
 
     @Override
