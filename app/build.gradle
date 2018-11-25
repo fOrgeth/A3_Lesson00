@@ -18,11 +18,22 @@ android {
 dependencies {
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVer}"
     implementation "com.android.support:design:${rootProject.ext.supportLibVer}"
+    implementation "com.android.support:support-annotations:${rootProject.ext.supportLibVer}"
+
     implementation "com.hannesdorfmann.mosby:mvp:${rootProject.ext.mosbyVer}"
     implementation "com.hannesdorfmann.mosby:viewstate:${rootProject.ext.mosbyVer}"
+
     implementation "io.reactivex:rxjava:${rootProject.ext.rxJavaVer}"
     implementation "io.reactivex:rxandroid:${rootProject.ext.rxAndroidVer}"
+
     implementation "com.jakewharton:butterknife:${rootProject.ext.butterKnifeVer}"
     annotationProcessor "com.jakewharton:butterknife-compiler:${rootProject.ext.butterKnifeVer}"
-    implementation "com.android.support:support-annotations:${rootProject.ext.supportLibVer}"
+
+    implementation "com.squareup.okhttp3:okhttp:${rootProject.ext.okHttpVer}"
+
+    implementation "com.google.code.gson:gson:${rootProject.ext.googleGsonVer}"
+
+    implementation "com.squareup.retrofit2:retrofit:${rootProject.ext.retrofit2Ver}"
+    implementation "com.squareup.retrofit2:converter-gson:${rootProject.ext.retrofit2Ver}"
+    implementation "com.squareup.retrofit2:adapter-rxjava:${rootProject.ext.retrofit2Ver}"
 }
