@@ -15,9 +15,6 @@ import rx.schedulers.Schedulers;
 
 public class InfoModelImpl implements InfoModel {
 
-    private static final String FUBAR = "FUBAR";
-    private static final String SUSFU = "SUSFU";
-    private static final String BOHICA = "BOHICA";
     private static final String HTTPS_API_GITHUB_COM_USERS = "https://api.github.com/users/";
     private Throwable throwable;
 
